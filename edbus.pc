@@ -1,0 +1,11 @@
+prefix=/usr/devel
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: edbus
+Description: DBus convenience library
+Requires.private: ecore >= 1.6.99 eina >= 1.6.99 dbus-1 >= 0.62
+Version: 1.7.1
+Libs: -L${libdir} -ledbus -L/usr/lib/i386-linux-gnu -ldbus-1 -lpthread -lrt  
+Cflags: -I${includedir}/e_dbus-1
