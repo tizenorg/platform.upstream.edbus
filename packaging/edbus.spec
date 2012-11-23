@@ -5,7 +5,7 @@ License:        BSD 2-clause
 Summary:        EFL Wrapper for DBus
 Url:            http://www.enlightenment.org/
 Group:          System/Libraries
-Source0:        e_dbus-%{version}.tar.gz
+Source0:        e_dbus-%{version}.tar.bz2
 BuildRequires:  doxygen
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(ecore)
