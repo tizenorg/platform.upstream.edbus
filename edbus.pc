@@ -1,4 +1,4 @@
-prefix=/usr/devel
+prefix=/home/lfelipe/src/efl-stable/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: edbus
 Description: DBus convenience library
 Requires.private: ecore >= 1.6.99 eina >= 1.6.99 dbus-1 >= 0.62
-Version: 1.7.1
-Libs: -L${libdir} -ledbus -L/usr/lib/i386-linux-gnu -ldbus-1 -lpthread -lrt  
+Version: 1.7.2
+Libs: -L${libdir} -ledbus -ldbus-1 -lpthread -lrt  
 Cflags: -I${includedir}/e_dbus-1

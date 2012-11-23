@@ -1,4 +1,4 @@
-prefix=/usr/devel
+prefix=/home/lfelipe/src/efl-stable/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: eukit
 Description: udisks/upower convenience library
 Requires.private: edbus >= 1.6.99
-Version: 1.7.1
+Version: 1.7.2
 Libs: -L${libdir} -leukit
 Cflags: -I${includedir}/e_dbus-1

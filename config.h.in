@@ -110,6 +110,9 @@
 /* Macro declaring a function argument to be unused */
 #undef __UNUSED__
 
+/* Define to `unsigned int' if <sys/types.h> does not define. */
+#undef size_t
+
 
 #endif /* EFL_CONFIG_H__ */
 
