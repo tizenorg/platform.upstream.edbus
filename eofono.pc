@@ -1,4 +1,4 @@
-prefix=/home/lfelipe/src/efl-stable/local
+prefix=/home/lfelipe/e-release/release/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: eofono
 Description: oFono D-Bus wrappers
 Requires.private: edbus >= 1.6.99
-Version: 1.7.2
+Version: 1.7.3
 Libs: -L${libdir} -leofono
 Cflags: -I${includedir}/e_dbus-1

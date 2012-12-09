@@ -1,4 +1,4 @@
-prefix=/home/lfelipe/src/efl-stable/local
+prefix=/home/lfelipe/e-release/release/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: enotify
 Description: Notification convenience library
 Requires.private: evas >= 1.6.99 edbus >= 1.6.99
-Version: 1.7.2
+Version: 1.7.3
 Libs: -L${libdir} -lenotify
 Cflags: -I${includedir}/e_dbus-1
