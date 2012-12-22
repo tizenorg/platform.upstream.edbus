@@ -933,13 +933,17 @@ uninstall-am: uninstall-pkgconfigDATA
 	uninstall uninstall-am uninstall-pkgconfigDATA
 
 
-.PHONY: doc
+.PHONY: doc install-doc
 
 # Documentation
 
 doc:
 	@echo "entering doc/"
 	make -C doc doc
+
+install-doc:
+	@echo "entering doc/"
+	make -C doc install-doc
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

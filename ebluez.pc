@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: ebluez
 Description: bluetooth device manager (bluez)
 Requires.private: edbus >= 1.6.99
-Version: 1.7.3
+Version: 1.7.4
 Libs: -L${libdir} -lebluez
 Cflags: -I${includedir}/e_dbus-1

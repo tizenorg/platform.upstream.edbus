@@ -1,11 +1,13 @@
+PACKAGE_TARNAME=e_dbus
 prefix=/home/lfelipe/e-release/release/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
 
 Name: edbus
 Description: DBus convenience library
 Requires.private: ecore >= 1.6.99 eina >= 1.6.99 dbus-1 >= 0.62
-Version: 1.7.3
+Version: 1.7.4
 Libs: -L${libdir} -ledbus -ldbus-1 -lpthread -lrt  
 Cflags: -I${includedir}/e_dbus-1

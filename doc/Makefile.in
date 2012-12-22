@@ -352,6 +352,7 @@ maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
+@EFL_BUILD_DOC_FALSE@uninstall-local:
 @EFL_BUILD_DOC_FALSE@clean-local:
 clean: clean-am
 
@@ -417,7 +418,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am:
+uninstall-am: uninstall-local
 
 .MAKE: install-am install-strip
 
@@ -431,20 +432,21 @@ uninstall-am:
 	install-strip installcheck installcheck-am installdirs \
 	maintainer-clean maintainer-clean-generic mostlyclean \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
-	uninstall uninstall-am
+	uninstall uninstall-am uninstall-local
 
 
-.PHONY: doc
+.PHONY: doc install-doc
 
 @EFL_BUILD_DOC_TRUE@doc-clean:
-@EFL_BUILD_DOC_TRUE@	rm -rf html/ latex/ $(top_builddir)/$(PACKAGE_DOCNAME).tar*
+@EFL_BUILD_DOC_TRUE@	rm -rf html/ latex/ man/ xml/ $(top_builddir)/$(PACKAGE_DOCNAME).tar*
 
-@EFL_BUILD_DOC_TRUE@doc: all
+@EFL_BUILD_DOC_TRUE@doc-build: all
 @EFL_BUILD_DOC_TRUE@	$(efl_doxygen)
-@EFL_BUILD_DOC_TRUE@	cp $(srcdir)/images/* html/
+
+@EFL_BUILD_DOC_TRUE@doc: doc-build
 @EFL_BUILD_DOC_TRUE@	rm -rf $(PACKAGE_DOCNAME).tar*
 @EFL_BUILD_DOC_TRUE@	mkdir -p $(PACKAGE_DOCNAME)/doc
-@EFL_BUILD_DOC_TRUE@	cp -R html/ latex/ $(PACKAGE_DOCNAME)/doc
+@EFL_BUILD_DOC_TRUE@	cp -R html/ latex/ xml/ $(PACKAGE_DOCNAME)/doc
 @EFL_BUILD_DOC_TRUE@	tar cf $(PACKAGE_DOCNAME).tar $(PACKAGE_DOCNAME)/
 @EFL_BUILD_DOC_TRUE@	bzip2 -9 $(PACKAGE_DOCNAME).tar
 @EFL_BUILD_DOC_TRUE@	rm -rf $(PACKAGE_DOCNAME)/
@@ -452,8 +454,17 @@ uninstall-am:
 
 @EFL_BUILD_DOC_TRUE@clean-local: doc-clean
 
+@EFL_BUILD_DOC_TRUE@install-doc: doc-build
+@EFL_BUILD_DOC_TRUE@	install -d $(docdir)
+@EFL_BUILD_DOC_TRUE@	cp -R html latex man xml $(docdir)
+
+@EFL_BUILD_DOC_TRUE@uninstall-local:
+@EFL_BUILD_DOC_TRUE@	rm -rf $(docdir)/html $(docdir)/latex $(docdir)/man $(docdir)/xml
+
 @EFL_BUILD_DOC_FALSE@doc:
 @EFL_BUILD_DOC_FALSE@	@echo "Documentation not built. Run ./configure --help"
+
+@EFL_BUILD_DOC_FALSE@install-doc: doc
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
