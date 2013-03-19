@@ -101,3 +101,15 @@
 
 	* 1.7.4 release
 
+2012-12-24 Vincent Torri
+
+	* Fix compilation on Windows when there is no .la files
+	* Remove useless variables in configure.ac
+
+2013-01-04  Luis Felipe Strano Moraes
+
+	* API consistency fix from Jérémy Zurcher
+
+2013-01-04  Luis Felipe Strano Moraes
+
+	* 1.7.5 release

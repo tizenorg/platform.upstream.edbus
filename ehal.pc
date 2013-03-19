@@ -5,7 +5,7 @@ includedir=${prefix}/include
 
 Name: ehal
 Description: Hal convenience library
-Requires.private: edbus >= 1.6.99
-Version: 1.7.4
+Requires.private: edbus >= 1.7.5
+Version: 1.7.5
 Libs: -L${libdir} -lehal
 Cflags: -I${includedir}/e_dbus-1

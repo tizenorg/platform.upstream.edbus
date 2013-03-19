@@ -7,7 +7,7 @@ docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
 
 Name: edbus
 Description: DBus convenience library
-Requires.private: ecore >= 1.6.99 eina >= 1.6.99 dbus-1 >= 0.62
-Version: 1.7.4
+Requires.private: ecore >= 1.7.5 eina >= 1.7.5 dbus-1 >= 0.62
+Version: 1.7.5
 Libs: -L${libdir} -ledbus -ldbus-1 -lpthread -lrt  
 Cflags: -I${includedir}/e_dbus-1
