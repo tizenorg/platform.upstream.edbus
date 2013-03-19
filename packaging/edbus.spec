@@ -1,10 +1,10 @@
 Name:           edbus
-Version:        1.7.4
+Version:        1.7.5
 Release:        1
 License:        BSD 2-clause
 Summary:        EFL Wrapper for DBus
 Url:            http://www.enlightenment.org/
-Group:          System/Libraries
+Group:          Graphics/EFL
 Source0:        e_dbus-%{version}.tar.bz2
 BuildRequires:  doxygen
 BuildRequires:  pkgconfig(dbus-1)
@@ -46,7 +46,7 @@ make %{?_smp_mflags}
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING
+%license COPYING
 %{_bindir}/e_dbus_*
 /usr/bin/e-notify-send
 %{_libdir}/libe*.so.*
