@@ -1,5 +1,5 @@
 Name:           edbus
-Version:        1.7.5
+Version:        1.7.7
 Release:        1
 License:        BSD 2-clause
 Summary:        EFL Wrapper for DBus
