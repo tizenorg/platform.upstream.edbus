@@ -1,11 +1,11 @@
-prefix=/home/lfelipe/e-release/release/local
+prefix=/home/antognolli/efl/1.7/git-release/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: eukit
 Description: udisks/upower convenience library
-Requires.private: edbus >= 1.7.5
-Version: 1.7.5
+Requires.private: edbus >= 1.7.7
+Version: 1.7.7
 Libs: -L${libdir} -leukit
 Cflags: -I${includedir}/e_dbus-1
