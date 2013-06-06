@@ -1,0 +1,9 @@
+Change-Id: I0daef7816790dac480041c9b564e492164d5ff85
+Code-Review+2: Anas Nashif
+Code-Review+1: Rusty Lynch <rusty.lynch@intel.com>
+Verified+1: Rusty Lynch <rusty.lynch@intel.com>
+Submitted-by: Anas Nashif
+Submitted-at: Thu, 06 Jun 2013 08:25:36 -0700
+Reviewed-on: https://review.tizen.org/gerrit/3853
+Project: platform/upstream/e_dbus
+Branch: refs/heads/tizen
