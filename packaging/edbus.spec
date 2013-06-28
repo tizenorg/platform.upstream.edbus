@@ -6,6 +6,7 @@ Summary:        EFL Wrapper for DBus
 Url:            http://www.enlightenment.org/
 Group:          Graphics/EFL
 Source0:        e_dbus-%{version}.tar.bz2
+Source1001: 	edbus.manifest
 BuildRequires:  doxygen
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(ecore)
@@ -25,6 +26,7 @@ Development files for e_dbus
 
 %prep
 %setup -q -n e_dbus-%{version}
+cp %{SOURCE1001} .
 
 %build
 %configure --disable-static
@@ -45,6 +47,7 @@ make %{?_smp_mflags}
 
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %license COPYING
 %{_bindir}/e_dbus_*
@@ -53,6 +56,7 @@ make %{?_smp_mflags}
 /usr/share/e_dbus/logo.png
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_includedir}/e_dbus-1/*.h
 %{_libdir}/*.so
