@@ -12,6 +12,7 @@ BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(ecore)
 BuildRequires:  pkgconfig(eina)
 BuildRequires:  pkgconfig(evas)
+BuildRequires:  libjpeg-devel
 
 %description
 e_dbus provides a convenience wrapper for EFL applications using DBus.
