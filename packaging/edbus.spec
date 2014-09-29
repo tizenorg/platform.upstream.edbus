@@ -8,6 +8,7 @@ Group:          Graphics & UI Framework/EFL
 Source0:        e_dbus-%{version}.tar.bz2
 Source1001:     edbus.manifest
 BuildRequires:  doxygen
+BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(ecore)
 BuildRequires:  pkgconfig(eina)
