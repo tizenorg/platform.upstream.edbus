@@ -1,12 +1,12 @@
 Name:           edbus
 Version:        1.7.8
-Release:        1
-License:        BSD 2-clause
+Release:        0
+License:        BSD-2-Clause
 Summary:        EFL Wrapper for DBus
 Url:            http://www.enlightenment.org/
-Group:          Graphics/EFL
+Group:          Graphics & UI Framework/EFL
 Source0:        e_dbus-%{version}.tar.bz2
-Source1001: 	edbus.manifest
+Source1001:     edbus.manifest
 BuildRequires:  doxygen
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(ecore)
@@ -29,31 +29,23 @@ Development files for e_dbus
 cp %{SOURCE1001} .
 
 %build
-%configure --disable-static
-make %{?_smp_mflags}
+%reconfigure --disable-static
+%__make %{?_smp_mflags}
 
 %install
 %make_install
 
-
-
-
 %post -p /sbin/ldconfig
-
 %postun -p /sbin/ldconfig
-
-
-
-
 
 %files
 %manifest %{name}.manifest
 %defattr(-,root,root,-)
 %license COPYING
 %{_bindir}/e_dbus_*
-/usr/bin/e-notify-send
+%{_bindir}/e-notify-send
 %{_libdir}/libe*.so.*
-/usr/share/e_dbus/logo.png
+%{_datadir}/e_dbus/logo.png
 
 %files devel
 %manifest %{name}.manifest
@@ -62,7 +54,4 @@ make %{?_smp_mflags}
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_includedir}/e_dbus-1/connman0_7x/E_Connman.h
-/usr/bin/e-notify-send
-
-
-%changelog
+%{_bindir}/e-notify-send
