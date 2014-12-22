@@ -1,11 +1,11 @@
-prefix=/usr/local
+prefix=/home/edebarro/install_stable/usr
 exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
+libdir=/home/edebarro/install_stable/usr/lib64
 includedir=${prefix}/include
 
 Name: enotify
 Description: Notification convenience library
-Requires.private: evas >= 1.7.8 edbus >= 1.7.8
-Version: 1.7.8
+Requires.private: evas >= 1.7.9 edbus >= 1.7.9
+Version: 1.7.9
 Libs: -L${libdir} -lenotify
 Cflags: -I${includedir}/e_dbus-1

@@ -4,7 +4,7 @@
 
 Summary: EFL Wrapper for DBus
 Name: e_dbus
-Version: 1.7.8
+Version: 1.7.9
 Release: %{_rel}
 License: BSD
 Group: System Environment/Libraries
