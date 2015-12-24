@@ -1,7 +1,7 @@
 Name:           edbus
 Version:        1.7.9
 Release:        0
-License:        BSD-2-Clause
+License:        BSD 2-Clause
 Summary:        EFL Wrapper for DBus
 Url:            http://www.enlightenment.org/
 Group:          Graphics & UI Framework/EFL
